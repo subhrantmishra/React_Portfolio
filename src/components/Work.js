@@ -18,7 +18,6 @@ function Work() {
            <div class="card">
                 <div class="overlay">
                     <span></span>
-                    <a href="#"></a>
                 </div>
                 <h2><u>Development Intern - Dyizan</u></h2>
                 <p>From 23/06/2025 to 07/08/2025</p>
@@ -32,7 +31,6 @@ function Work() {
             <div class="card">
                 <div class="overlay">
                     <span></span>
-                    <a href="#"></a>
                 </div>
                 <h2><u>Frontend Development Intern - Code Alpha</u></h2>
                 <p>From 01/07/2025 to 30/07/2025</p>
@@ -46,7 +44,6 @@ function Work() {
             <div class="card">
                 <div class="overlay">
                     <span></span>
-                    <a href="#"></a>
                 </div>
                 <h2><u>Web Development Intern - CodSoft</u></h2>
                 <p>From 25/06/2025 to 25/07/2025</p>
