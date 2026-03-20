@@ -13,6 +13,7 @@ import SplashCursor from "./components/SplashCursor";
 function App() {
   return (
     <div style={{ position: "relative" }}>
+
       {/* 🔥 Cursor Animation */}
       <SplashCursor />
 
@@ -26,14 +27,15 @@ function App() {
           height: "100%",
           zIndex: -1
         }}
-      ></div>
+      >
         <Galaxy 
-          mouseInteraction
-          mouseRepulsion
-          density={20}        // smoother
-          glowIntensity={0.1}
-          speed={0.1}
+          mouseInteraction={false}
+          mouseRepulsion={false}
+          density={0.4}
+          glowIntensity={0.15}
+          speed={0.08}
         />
+      </div>
 
       {/* 🔥 Content */}
       <Navbar />
