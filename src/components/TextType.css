@@ -1,0 +1,15 @@
+.text-type {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 450;
+}
+
+.text-type__cursor {
+  margin-left: 4px;
+  display: inline-block;
+  color: #00e0ff;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
