@@ -7,7 +7,6 @@ import Work from './components/Work';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Galaxy from "./components/Galaxy";
 import SplashCursor from "./components/SplashCursor";
 
 function App() {
@@ -28,13 +27,7 @@ function App() {
           zIndex: -1
         }}
       >
-        <Galaxy 
-          mouseInteraction={false}
-          mouseRepulsion={false}
-          density={0.4}
-          glowIntensity={0.15}
-          speed={0.08}
-        />
+        
       </div>
 
       {/* 🔥 Content */}
