@@ -277,10 +277,12 @@ section.freelancer{
 section.freelancer h1{
     font-size:2.5rem;
     margin-bottom:0.5rem;
+    color:var(--pure);
 }
 section.freelancer p{
-    font-size:1.2rem;
+    font-size:1rem;
     margin-bottom: 2rem;
+    color: var(--pure);
     font-family:'Lato', sans-serif;
 }
 
