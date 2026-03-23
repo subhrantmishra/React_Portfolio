@@ -1,12 +1,10 @@
-//import bg from "./images/camera.png";
-
 function Freelancer() {
   return (
     <>
       <section
         className="freelancer"
         style={{
-          //background: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${bg})`,
+          background: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/images/camera.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "60px 0",
