@@ -8,7 +8,7 @@ function Services() {
         <div className="card-wrapper">
 
           <div className="card">
-            <img src="/images/lang.png" alt="" />
+            <img src="/images/Lang.png" alt="" />
             <h2>Language</h2>
             <p>* C</p>
             <p>* C++</p>
