@@ -6,7 +6,7 @@ function Hero() {
       <div className="hero flex items-center justify-between">
         
         <div className="left flex-1 flex justify-center">
-          <img src="/images/man0.png" alt="" />
+          <img src="/images/subh2.png" alt="" />
         </div>
 
         <div className="right flex-1">
@@ -30,7 +30,7 @@ function Hero() {
            Development technologies, and I continuously strive to expand my technical 
            expertise by learning emerging tools and technologies that create meaningful impact.
           </p>
-
+        <div className="hero-buttons">
           <a 
           href="/images/Subhrant_s_Resume (2).pdf" 
           className="btn btn-secondary"
@@ -38,7 +38,7 @@ function Hero() {
           >
             DOWNLOAD CV
           </a>
-
+        </div>
         </div>
       </div>
     </div>
