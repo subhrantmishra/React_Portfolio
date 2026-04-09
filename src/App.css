@@ -31,7 +31,7 @@ header{
 }
 .container{
     max-width:1152px;
-    padding:0 5px;
+    padding:0 15px;
     margin:0 auto;
 }
 
@@ -81,12 +81,17 @@ header nav .branding{
 }
 .hero{
     padding:3rem 0;
+    position: relative;
+    margin-top: 150px;
 }
 .hero-title {
-  width: 400px;   /* fix width */
+  width: 400px; 
 }
 .hero .left img{
     width:400px;
+    position: absolute;
+    top: -100px;  
+    left: -45px;  
 }
 .hero .right{
     color:var(--pure);
@@ -277,7 +282,7 @@ section.freelancer{
 section.freelancer h1{
     font-size:2.5rem;
     margin-bottom:0.5rem;
-    color:var(--pure);
+    color: var(--pure);
 }
 section.freelancer p{
     font-size:1rem;
