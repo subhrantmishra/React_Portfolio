@@ -346,12 +346,6 @@ footer .copyright{ color:var(--ternary); }
         margin-top: -6rem; /* adjusted */
     }
 
-    .hamberger *{
-    color: white !important;
-    fill: white !important;
-    stroke: white !important;
-    }
-
     section.about .about-me-img{ height:360px; }
     section.services .card-wrapper{ grid-template-columns:repeat(2,1fr); }
 }
