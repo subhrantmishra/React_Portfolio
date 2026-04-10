@@ -350,6 +350,10 @@ footer .copyright{ color:var(--ternary); }
         margin-top: -6rem; /* adjusted */
     }
 
+    .hamberger span{
+        background: white;
+    }
+
     section.about .about-me-img{ height:360px; }
     section.services .card-wrapper{ grid-template-columns:repeat(2,1fr); }
 }
