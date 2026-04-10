@@ -252,7 +252,7 @@ section.work .card:hover{ transform: translateY(-5px); }
 section.work .card h2{ font-size:1.3rem; font-weight:500; margin-bottom:1rem; text-align:center; color:var(--secondary); letter-spacing:1.02px; }
 section.work .card p{ font-size:0.9rem; text-align:center; font-weight:600; color:var(--secondary); margin-bottom:1rem; }
 section.work .card ul.des{ list-style-type:square; padding-left:1.2rem; }
-section.work .card ul.des li{ font-family:'Lato',sans-serif; text-align:left; font-size:1rem; color:var(--ternary); margin-bottom:0.5rem; }
+section.work .card ul.des li{ font-family:'Lato',sans-serif; text-align:justify; font-size:1rem; color:var(--ternary); margin-bottom:0.5rem; }
 
 /* ===== PROJECTS ===== */
 section.projects{ background:var(--light); }
@@ -260,7 +260,7 @@ section.projects .section-heading{ text-align:center; line-height:0.5; margin-bo
 .projects-container{ max-width:1000px; margin:50px auto; padding:20px; }
 .card{ background:#fff; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); padding:20px; margin-bottom:30px; }
 .project-title{ font-size:22px; font-weight:bold; margin-bottom:10px; color:#333; }
-.project-description{ font-size:16px; color:#555; }
+.project-description{ font-size:16px; color:#555; text-align: justify;}
 .view-images-btn{ margin-top:15px; padding:8px 16px; background-color:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; font-size:14px; }
 .view-images-btn:hover{ background-color:#0056b3; }
 .project-images{ margin-top:20px; }
