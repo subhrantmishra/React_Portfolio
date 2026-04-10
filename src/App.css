@@ -52,10 +52,6 @@ header{
 @media (min-width: 1200px) {
     .container { max-width: 1152px; }
 }
-.hamberger img{
-    width:30px;
-    filter: invert(1);   /* white banane ke liye */
-}
 /* ===== NAV ===== */
 header nav .left a{
     color:var(--pure);
@@ -350,8 +346,10 @@ footer .copyright{ color:var(--ternary); }
         margin-top: -6rem; /* adjusted */
     }
 
-    .hamberger span{
-        background: white;
+    .hamberger *{
+    color: white !important;
+    fill: white !important;
+    stroke: white !important;
     }
 
     section.about .about-me-img{ height:360px; }
