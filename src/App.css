@@ -405,6 +405,7 @@ footer .copyright{ color:var(--ternary); }
     .hero .right p{
         text-align: left;
         font-size: 0.9rem;
+        text-align: justify;
     }
     .hero-title{
         width: 100% !important;
