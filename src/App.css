@@ -382,7 +382,7 @@ footer .copyright{ color:var(--ternary); }
         height: 200px;
         object-fit: cover;
         border-radius: 50%;
-        margin-top: 1000px;
+        margin: 0 auto;
     }
 
     /* Text block */
