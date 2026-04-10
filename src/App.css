@@ -340,6 +340,7 @@ footer .copyright{ color:var(--ternary); }
         width: 260px;
         top: -60px;
         left: -20px;
+        margin-top: 1000px;
     }
     .hero .right h1{
         font-size: 3rem;
@@ -480,7 +481,7 @@ footer .copyright{ color:var(--ternary); }
 @media (max-width:480px){
     .hero .right h1{ font-size: 1.8rem !important; }
     .hero .right h6{ font-size: 1rem; }
-    .hero .left img{ width: 160px !important; height: 160px; margin-top: 1000px;}
+    .hero .left img{ width: 160px !important; height: 160px;}
 
     section.work .card h2{ font-size:1.1rem; }
     section.work .card p{ font-size:0.8rem; }
