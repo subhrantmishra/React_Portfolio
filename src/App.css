@@ -52,8 +52,9 @@ header{
 @media (min-width: 1200px) {
     .container { max-width: 1152px; }
 }
-.mobile-nav ul li a{
-    color: white;   /* 👈 change here */
+.hamberger img{
+    width:30px;
+    filter: invert(1);   /* white banane ke liye */
 }
 /* ===== NAV ===== */
 header nav .left a{
