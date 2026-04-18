@@ -125,7 +125,7 @@ const Projects = () => {
               <img src="/images/A1.jpeg" alt="" />
               <img src="/images/A2.jpeg" alt="" />
               <img src="/images/A3.jpeg" alt="" />
-              <img src="/images/A4.png" alt="" />
+              <img src="/images/A4.jpeg" alt="" />
             </div>
           )}
         </div>
