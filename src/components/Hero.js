@@ -14,7 +14,7 @@ function Hero() {
           {/* ✅ Animated Name */}
           <h1 className="hero-title">
            <TextType
-            text={["Subhrant Mishra"]}
+            text={["Ritik Tiwari"]}
             typingSpeed={120}
             deletingSpeed={50}   // 👈 thoda delete speed add karo
             loop={true}          // 🔥 ye important hai
