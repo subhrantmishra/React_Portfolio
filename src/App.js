@@ -1,47 +1,48 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Services from './components/Services';
+import { useState, useEffect } from "react";
+import "./App.css";
+
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Services from "./components/Services";
 import Freelancer from "./components/Freelancer";
-import Work from './components/Work';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Work from "./components/Work";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import SplashCursor from "./components/SplashCursor";
+import GreetingSlider from "./components/GreetingSlider";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div style={{ position: "relative" }}>
+    <>
+      <CustomCursor />  {/* ← Hamesha render hoga, loading ke bahar */}
 
-      {/* 🔥 Cursor Animation */}
-      <SplashCursor />
-
-      {/* 🔥 Background Animation */}
-      <div
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: -1
-        }}
-      >
-        
-      </div>
-
-      {/* 🔥 Content */}
-      <Navbar />
-      <About />
-      <Services />
-      <Freelancer />
-      <Work />
-      <Projects />
-      <Contact />
-      <Footer />
-
-    </div>
+      {loading ? (
+        <GreetingSlider />
+      ) : (
+        <div style={{ position: "relative" }}>
+          <SplashCursor />
+          <Navbar />
+          <About />
+          <Services />
+          <Freelancer />
+          <Work />
+          <Projects />
+          <Contact />
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
-
 export default App;
