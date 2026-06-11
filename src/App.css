@@ -14,6 +14,8 @@ body{
     font-family:'Poppins',sans-serif;
 }
 
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -22,6 +24,45 @@ html{
     margin:0;
     box-sizing: border-box;
     -webkit-font-smoothing:antialiased;
+}
+
+/* Yeh CSS CustomCursor ke liye global file mein daalo */
+
+* { cursor: none !important; }
+
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 6px; height: 6px;
+  margin-left: -3px; margin-top: -3px;
+  border-radius: 50%;
+  background: #00d4d4;
+  box-shadow: 0 0 8px #00d4d4, 0 0 16px rgba(0, 212, 212, 0.5);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 36px; height: 36px;
+  margin-left: -18px; margin-top: -18px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 212, 212, 0.6);
+  box-shadow: 0 0 10px rgba(0, 212, 212, 0.2);
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.1s ease-out;
+  will-change: transform;
+}
+
+.cursor-dot.visible,
+.cursor-ring.visible {
+  opacity: 1;
 }
 
 /* ===== HEADER ===== */
@@ -52,6 +93,7 @@ header{
 @media (min-width: 1200px) {
     .container { max-width: 1152px; }
 }
+
 /* ===== NAV ===== */
 header nav .left a{
     color:var(--pure);
@@ -286,6 +328,7 @@ section.contact .input-wrap-2 textarea{ padding:0.5rem; border:1px solid var(--l
 section.contact .input-wrap-2 textarea:focus,
 section.contact input:focus{ outline:none; }
 section.contact .btn-wrapper{ text-align:center; margin-top:2rem; }
+
 
 /* ===== FOOTER ===== */
 footer{ background:var(--dark); text-align:center; padding:5rem 0; }
