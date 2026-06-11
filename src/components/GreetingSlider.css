@@ -1,0 +1,208 @@
+/* ── Fonts ─────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* ── Reset / Root ───────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #0d0d0d;       /* portfolio ka exact dark bg */
+  --orb-a:     #00c8c8;       /* primary cyan — matches heading color */
+  --orb-b:     #007a7a;       /* deeper teal for depth */
+  --orb-c:     #00ffee;       /* bright cyan highlight */
+  --text:      #ffffff;
+  --lang:      rgba(0, 210, 200, 0.6);   /* cyan tint */
+  --pip:       rgba(0, 200, 180, 0.22);
+  --pip-on:    #00d4d4;       /* exact portfolio accent */
+}
+
+/* ── Screen ─────────────────────────────────────────────── */
+.greeting-screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ── Ambient orbs ───────────────────────────────────────── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  animation: drift 14s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.orb-1 {
+  width: 520px; height: 520px;
+  background: var(--orb-a);
+  top: -140px; left: -160px;
+  animation-duration: 18s;
+}
+.orb-2 {
+  width: 420px; height: 420px;
+  background: var(--orb-b);
+  bottom: -120px; right: -120px;
+  animation-duration: 13s;
+  animation-delay: -4s;
+}
+.orb-3 {
+  width: 300px; height: 300px;
+  background: var(--orb-c);
+  top: 50%; left: 55%;
+  transform: translate(-50%, -50%);
+  opacity: 0.18;
+  animation-duration: 22s;
+  animation-delay: -9s;
+}
+
+@keyframes drift {
+  from { transform: translate(0, 0)   scale(1);   }
+  to   { transform: translate(40px, 30px) scale(1.12); }
+}
+
+/* ── Dot grid overlay ───────────────────────────────────── */
+.dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.045) 1px,
+    transparent 1px
+  );
+  background-size: 36px 36px;
+  pointer-events: none;
+}
+
+/* ── Wrapper ─────────────────────────────────────────────── */
+.greeting-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+/* ── Pip dots ─────────────────────────────────────────────── */
+.dot-row {
+  display: flex;
+  gap: 8px;
+}
+
+.dot-pip {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pip);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dot-pip.active {
+  background: var(--pip-on);
+  transform: scale(1.5);
+  box-shadow: 0 0 8px var(--pip-on);
+}
+
+/* ── Main greeting text ─────────────────────────────────── */
+.greeting-text {
+  font-family: "Poppins";
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  font-weight: 200;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-align: center;
+  user-select: none;
+
+  /* subtle text shadow for depth */
+  text-shadow:
+    0 0 60px rgba(0, 212, 212, 0.4),
+    0 0 120px rgba(0, 180, 180, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* fast spin → slight blur, opacity flicker */
+.greeting-text.phase-fast {
+  animation: spinFlicker 0.08s steps(1) both;
+}
+
+/* slowing → clean scale-in */
+.greeting-text.phase-slowing {
+  animation: popIn 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* hold → elegant entrance with glow */
+.greeting-text.phase-hold {
+  animation: landGlow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes spinFlicker {
+  from { opacity: 0.5; transform: scaleY(0.88) skewX(-2deg); }
+  to   { opacity: 1;   transform: scaleY(1)    skewX(0deg);  }
+}
+
+@keyframes popIn {
+  from { opacity: 0.6; transform: scale(0.92); }
+  to   { opacity: 1;   transform: scale(1);    }
+}
+
+@keyframes landGlow {
+  0%   { opacity: 0;   transform: scale(0.82); filter: blur(8px); }
+  60%  { opacity: 1;   transform: scale(1.04); filter: blur(0);   }
+  100% { opacity: 1;   transform: scale(1);    filter: blur(0);   }
+}
+
+/* ── Language label ─────────────────────────────────────── */
+.greeting-lang {
+  font-family: "Poppins";
+  font-size: clamp(0.7rem, 2vw, 0.95rem);
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--lang);
+  user-select: none;
+}
+
+.greeting-lang.phase-fast {
+  opacity: 0;
+}
+
+.greeting-lang.phase-slowing {
+  animation: fadeUp 0.22s ease both;
+}
+
+.greeting-lang.phase-hold {
+  animation: fadeUp 0.55s 0.15s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* ── Reduced motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .orb,
+  .greeting-text,
+  .greeting-lang {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── Mobile tweaks ──────────────────────────────────────── */
+@media (max-width: 480px) {
+  .orb-1 { width: 300px; height: 300px; }
+  .orb-2 { width: 260px; height: 260px; }
+  .orb-3 { width: 180px; height: 180px; }
+}
