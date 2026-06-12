@@ -94,6 +94,15 @@ header{
     .container { max-width: 1152px; }
 }
 
+.hamberger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamberger {
+    display: block;
+  }
+}
 /* ===== NAV ===== */
 header nav .left a{
     color:var(--pure);
