@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Hero from "./Hero";   // 👈 Hero import
+import Hero from "./Hero";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -23,21 +23,20 @@ function Navbar() {
             </div>
           </div>
 
-          <div className="right">
+          <div className="right flex items-center">
             <a href="#contact" className="btn btn-primary">
               Contact
             </a>
+            {/* Hamburger — Contact ke saath same row mein */}
+            <button className="hamberger" onClick={() => setOpen(true)}>
+              ☰
+            </button>
           </div>
+
         </nav>
       </div>
 
-      {/* ✅ Hero component yaha use hoga */}
       <Hero />
-
-      {/* Hamburger */}
-      <button className="hamberger" onClick={() => setOpen(true)}>
-        ☰
-      </button>
 
       {/* Mobile Menu */}
       <div className={`mobile-nav ${open ? "open" : ""}`}>
