@@ -32,7 +32,7 @@ function Hero() {
           </p>
         <div className="hero-buttons">
           <a 
-          href="/images/Subhrant_s_Resume (2).pdf" 
+          href="/images/Subhrant_s_Resume_Updated.pdf" 
           className="btn btn-secondary"
           download
           >
