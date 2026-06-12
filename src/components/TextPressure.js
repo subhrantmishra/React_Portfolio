@@ -82,7 +82,7 @@ const TextPressure = ({
           };
           const d = dist(mouseRef.current, charCenter);
           const wght = weight ? Math.floor(getAttr(d, maxDist, 400, 900)) : 400;
-          const italVal = italic ? getAttr(d, maxDist, 0, 1).toFixed(2) : 0;
+          // const italVal = italic ? getAttr(d, maxDist, 0, 1).toFixed(2) : 0;
           const alphaVal = alpha ? getAttr(d, maxDist, 0.3, 1).toFixed(2) : 1;
 
           span.style.fontVariationSettings = `'wght' ${wght}`;
