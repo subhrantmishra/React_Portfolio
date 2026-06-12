@@ -23,7 +23,7 @@ function Freelancer() {
 </h1>
           <p>We provide high standard clean website for your business solutions</p>
           <a 
-          href="/images/Subhrant_s_Resume (2).pdf" 
+          href="/images/Subhrant_s_Resume_Updated.pdf" 
           className="btn btn-primary"
           download
           >
