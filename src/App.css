@@ -100,8 +100,8 @@ header{
 
 @media (max-width: 768px) {
     header nav .branding img {
-        width: 50px;
-        height: 35px;
+        width: 65px;
+        height: 30px;
     }
 
     header nav .right .btn-primary {
