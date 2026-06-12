@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import TextPressure from "./TextPressure";
 const Projects = () => {
   // separate state for each card
   const [showGalleryImages, setShowGalleryImages] = useState(false);
@@ -12,7 +12,10 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="container">
         <h1 className="section-heading">
-          <span>Our </span>Projects
+        <span>
+          <TextPressure text="Our " textColor="#000000" />
+        </span>
+          <TextPressure text="Projects" textColor="#00d9ff" />
         </h1>
         <p>We provide high standard clean websites for your business solutions</p>
 
