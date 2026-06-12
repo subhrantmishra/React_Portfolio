@@ -116,11 +116,19 @@ header nav .left a:hover{
 }
 header nav {
     padding:2rem 0;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 header nav .branding{
     margin-right:3rem;
 }
 
+header nav .right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.5rem;
+}
 /* ===== HERO ===== */
 .hero{
     padding:3rem 0;
