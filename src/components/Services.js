@@ -1,8 +1,15 @@
+import TextPressure from "./TextPressure";
+
 function Services() {
   return (
     <section id="services" className="services">
       <div className="container">
-        <h1 className="section-heading"><span>Our </span>Skills</h1>
+        <h1 className="section-heading">
+        <span>
+          <TextPressure text="Our " textColor="#000000" />
+        </span>
+          <TextPressure text="Skills" textColor="#00d9ff" />
+        </h1>
         <p>We provide high standar clean website for your business solutions</p>
 
         <div className="card-wrapper">
