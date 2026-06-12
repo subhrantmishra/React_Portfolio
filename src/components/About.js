@@ -1,3 +1,6 @@
+import TextPressure from "./TextPressure";
+
+
 function About() {
   return (
     <section id="about" className="about">
@@ -8,7 +11,14 @@ function About() {
 
         <div className="flex-1 right">
           <div className="about-text-card">
-          <h1>About <span>Me</span></h1>
+
+        <h1>
+          <TextPressure text="About" textColor="#000000" />{" "}
+        <span>
+          <TextPressure text="Me" textColor="#00d9ff" />
+        </span>
+        </h1>
+
           <h3>Hello! I’m Subhrant Mishra.</h3>
           <p>I’m a B.Tech student pursuing my 
             degree in Computer Science and Engineering 
