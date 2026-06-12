@@ -353,8 +353,10 @@ footer .copyright{ color:var(--ternary); }
 /* ===== HAMBURGER / MOBILE NAV ===== */
 .site-main-wrapper{ position:relative; }
 .hamberger{
-    position:absolute; top:40px; right:40px; z-index:11;
+    position:static;
     background:none; border:none; outline:none; cursor:pointer; display:none;
+    margin-left: 1rem;
+    z-index:11;
 }
 .hamberger img{ width:30px; }
 .mobile-nav{
