@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
-import About from "./components/About";
 import Services from "./components/Services";
 import Freelancer from "./components/Freelancer";
 import Work from "./components/Work";
