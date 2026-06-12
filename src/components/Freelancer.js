@@ -16,7 +16,7 @@ function Freelancer() {
       >
         <div className="container">
           <h1>
-  <TextPressure text="I Am Available For Freelancer " textColor="#ffffff" />
+  <TextPressure text="I Am Available For " textColor="#ffffff" />
   <span>
     <TextPressure text="Freelancer" textColor="#00d9ff" />
   </span>
