@@ -1,3 +1,5 @@
+import TextPressure from "./TextPressure";
+
 function Freelancer() {
   return (
     <>
@@ -13,7 +15,12 @@ function Freelancer() {
         }}
       >
         <div className="container">
-          <h1>I Am Available For Freelancer</h1>
+          <h1>
+  <TextPressure text="I Am Available For Freelancer " textColor="#ffffff" />
+  <span>
+    <TextPressure text="Freelancer" textColor="#00d9ff" />
+  </span>
+</h1>
           <p>We provide high standard clean website for your business solutions</p>
           <a 
           href="/images/Subhrant_s_Resume (2).pdf" 
