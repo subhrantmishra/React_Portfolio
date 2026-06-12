@@ -99,9 +99,29 @@ header{
 }
 
 @media (max-width: 768px) {
-  .hamberger {
-    display: block;
-  }
+    header nav .branding img {
+        width: 35px;
+        height: 35px;
+    }
+
+    header nav .right .btn-primary {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.7rem;
+    }
+
+    header nav .right {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        gap: 0.4rem;
+    }
+
+    .hamberger {
+        display: block !important;
+        font-size: 1.4rem;
+        color: #3DCFD3;
+        margin-left: 0;
+    }
 }
 /* ===== NAV ===== */
 header nav .left a{
