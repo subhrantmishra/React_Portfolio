@@ -3,6 +3,7 @@ import "./App.css";
 
 import Navbar from "./components/Navbar";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Services from "./components/Services";
 import Freelancer from "./components/Freelancer";
 import Work from "./components/Work";
