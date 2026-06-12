@@ -4,6 +4,10 @@ function CustomCursor() {
   const [cursor, setCursor] = useState({ x: -100, y: -100, visible: false });
 
   useEffect(() => {
+    // Touch device pe cursor nahi dikhana
+    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+    if (isTouchDevice) return;
+
     const onMove = (e) =>
       setCursor({ x: e.clientX, y: e.clientY, visible: true });
     const onLeave = () =>
@@ -12,7 +16,6 @@ function CustomCursor() {
     document.addEventListener("mousemove", onMove);
     document.addEventListener("mouseleave", onLeave);
 
-    // Hide default cursor on entire page
     document.body.style.cursor = "none";
 
     return () => {
