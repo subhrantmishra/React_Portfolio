@@ -357,7 +357,11 @@ footer .copyright{ color:var(--ternary); }
     background:none; border:none; outline:none; cursor:pointer; display:none;
     margin-left: 1rem;
     z-index:11;
+    color: #3DCFD3;
+    font-size: 1.8rem;
+    line-height: 1;
 }
+
 .hamberger img{ width:30px; }
 .mobile-nav{
     position:fixed; top:0; left:0; z-index:1001;
