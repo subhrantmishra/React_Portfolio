@@ -1,8 +1,15 @@
+import TextPressure from "./TextPressure";
+
 function Work() {
   return (
     <section id="work" className="work">
       <div className="container">
-        <h1 className="section-heading"><span>Our</span> Works</h1>
+        <h1 className="section-heading">
+        <span>
+          <TextPressure text="Our " textColor="#000000" />
+        </span>
+          <TextPressure text="Works" textColor="#00d9ff" />
+        </h1>
         <p>We provide high standar clean website for your business solutions</p>
 
         <div className="card-wrapper">
@@ -16,6 +23,7 @@ function Work() {
           </div>
 
            <div class="card">
+                
                 <h2><u>Development Intern - Dyizan</u></h2>
                 <p>From 23/06/2025 to 07/08/2025</p>
                 <ul class="des">
@@ -26,6 +34,7 @@ function Work() {
             </div>
 
             <div class="card">
+                
                 <h2><u>Frontend Development Intern - Code Alpha</u></h2>
                 <p>From 01/07/2025 to 30/07/2025</p>
                 <ul class="des">
@@ -36,6 +45,7 @@ function Work() {
             </div>
 
             <div class="card">
+    
                 <h2><u>Web Development Intern - CodSoft</u></h2>
                 <p>From 25/06/2025 to 25/07/2025</p>
                 <ul class="des">
