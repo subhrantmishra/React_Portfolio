@@ -1,8 +1,15 @@
+import TextPressure from "./TextPressure";
+
 function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <h1 className="section-heading">Contact <span>Us</span></h1>
+        <h1 className="section-heading">
+        <span>
+          <TextPressure text="Contact " textColor="#000000" />
+        </span>
+          <TextPressure text="Us" textColor="#00d9ff" />
+        </h1>
 
         <p>We provide high standard clean website for your business solutions</p>
 
