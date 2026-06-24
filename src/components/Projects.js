@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import TextPressure from "./TextPressure";
 const Projects = () => {
   // separate state for each card
-  const [showGalleryImages, setShowGalleryImages] = useState(false);
-  const [showCalculatorImages, setShowCalculatorImages] = useState(false);
+  const [showPathology, setPathology] = useState(false);
+  const [showSmartClassroom, setSmartClassroom] = useState(false);
   const [showPortfolioimages, setShowPortfolioimages] = useState(false);
   const [showHotelimages, setShowHotelimages] = useState(false);
   const [showArmoryimages, setShowArmoryimages] = useState(false);
+  const [showHandWritten, setHandWritten] = useState(false);
 
   return (
     <section id="projects" className="projects">
@@ -19,49 +20,109 @@ const Projects = () => {
         </h1>
         <p>We provide high standard clean websites for your business solutions</p>
 
-        {/* Image Gallery Card */}
+
+
+        <div className="projects-grid">
+        {/* Pathology Card */}
         <div className="card">
-          <div className="project-title">Image Gallery</div>
+          <div className="project-title">Pathology Management System</div>
           <div className="project-description">
-            Interactive image gallery website with responsive design and hover effects using HTML, CSS, and JS.
+            Developed a full-stack Pathology Management System using TypeScript and Supabase 
+            with secure admin authentication, patient record management, automated test 
+            pricing, result processing, and printable diagnostic report generation.
           </div>
           <button
             className="view-images-btn"
-            onClick={() => setShowGalleryImages(!showGalleryImages)}
+            onClick={() => setPathology(!showPathology)}
           >
-            {showGalleryImages ? 'Hide Images' : 'View Images'}
+            {showPathology ? 'Hide Images' : 'View Images'}
           </button>
-          {showGalleryImages && (
+          {showPathology && (
             <div className="project-images">
-              <img src="/images/G1.png" alt="Gallery 1" />
-              <img src="/images/G2.png" alt="Gallery 2" />
-              <img src="/images/G3.png" alt="Gallery 3" />
-              <img src="/images/G4.png" alt="Gallery 4" />
+              <img src="/images/AP1.png" alt="" />
+              <img src="/images/AP2.png" alt="" />
+              <img src="/images/AP3.png" alt="" />
+              <img src="/images/AP4.png" alt="" />
+              <img src="/images/AP5.png" alt="" />
+              <img src="/images/AP6.png" alt="" />
             </div>
           )}
         </div>
 
-        {/* Calculator Card */}
+
         <div className="card">
-          <div className="project-title">Calculator</div>
+          <div className="project-title">Smart Classroom Help System</div>
           <div className="project-description">
-            The Simple Web Calculator is functional and responsive with hover effects, built using HTML, CSS, and JS.
+            Built a full-stack student–teacher doubt-solving platform using React, 
+            Node.js, and MongoDB, allowing real-time doubt submission, response management, 
+            and seamless interaction between students and teachers.
           </div>
           <button
             className="view-images-btn"
-            onClick={() => setShowCalculatorImages(!showCalculatorImages)}
+            onClick={() => setSmartClassroom(!showSmartClassroom )}
           >
-            {showCalculatorImages ? 'Hide Images' : 'View Images'}
+            {showSmartClassroom ? 'Hide Images' : 'View Images'}
           </button>
-          {showCalculatorImages && (
+          {showSmartClassroom && (
             <div className="project-images">
-              <img src="/images/C1.png" alt="Calculator 1" />
-              <img src="/images/C2.png" alt="Calculator 2" />
-              <img src="/images/C3.png" alt="Calculator 3" />
-              <img src="/images/C4.png" alt="Calculator 4" />
+              <img src="/images/S1.png" alt="" />
+              <img src="/images/S2.png" alt="" />
+              <img src="/images/S3.png" alt="" />
+              <img src="/images/S4.png" alt="" />
+              
             </div>
           )}
         </div>
+
+        <div className="card">
+          <div className="project-title">Armory Management System</div>
+          <div className="project-description">
+          Engineered a Defense Armory Security Management System with biometric 
+          authentication, ultrasonic sensors, and database integration for secure 
+          weapon tracking and access management.
+          </div>
+          <button
+            className="view-images-btn"
+            onClick={() => setShowArmoryimages(!showArmoryimages)}
+          >
+            {showArmoryimages ? 'Hide Images' : 'View Images'}
+          </button>
+          {showArmoryimages && (
+            <div className="project-images">
+              <img src="/images/A1.jpeg" alt="" />
+              <img src="/images/A2.jpeg" alt="" />
+              <img src="/images/A3.jpeg" alt="" />
+              <img src="/images/A4.jpeg" alt="" />
+            </div>
+          )}
+        </div>
+
+
+        <div className="card">
+          <div className="project-title">Hotel Management System</div>
+          <div className="project-description">
+          The Hotel Management System is a web-based front-end project designed only using Java
+          and MySql workbench  to manage hotel room bookings, guest information, and service records.
+          </div>
+          <button
+            className="view-images-btn"
+            onClick={() => setShowHotelimages(!showHotelimages)}
+          >
+            {showHotelimages ? 'Hide Images' : 'View Images'}
+          </button>
+          {showHotelimages && (
+            <div className="project-images">
+              <img src="/images/H1.png" alt="" />
+              <img src="/images/H2.png" alt="" />
+              <img src="/images/H3.png" alt="" />
+              <img src="/images/H4.png" alt="" />
+              <img src="/images/H5.png" alt="" />
+              <img src="/images/H6.png" alt="" />
+            </div>
+          )}
+        </div>
+
+
 
         <div className="card">
           <div className="project-title">Portfolio Website</div>
@@ -88,50 +149,29 @@ const Projects = () => {
         </div>
 
         <div className="card">
-          <div className="project-title">Hotel Management System</div>
+          <div className="project-title">Hand-Written Digit Recognition</div>
           <div className="project-description">
-          The Hotel Management System is a web-based front-end project designed only using Java
-          and MySql workbench  to manage hotel room bookings, guest information, and service records.
+            Designed a Handwritten Digit Recognition System using Python 
+            and Machine Learning to recognize handwritten digits and report 
+            prediction accuracy as confidence percentages.
           </div>
           <button
             className="view-images-btn"
-            onClick={() => setShowHotelimages(!showHotelimages)}
+            onClick={() => setHandWritten(!showHandWritten )}
           >
-            {showHotelimages ? 'Hide Images' : 'View Images'}
+            {showHandWritten ? 'Hide Images' : 'View Images'}
           </button>
-          {showHotelimages && (
+          {showHandWritten && (
             <div className="project-images">
-              <img src="/images/H1.png" alt="" />
-              <img src="/images/H2.png" alt="" />
-              <img src="/images/H3.png" alt="" />
-              <img src="/images/H4.png" alt="" />
-              <img src="/images/H5.png" alt="" />
-              <img src="/images/H6.png" alt="" />
+              <img src="/images/HW1.png" alt="" />
+              <img src="/images/HW2.png" alt="" />
+              
             </div>
           )}
         </div>
+        </div>{/* end projects-grid */}
 
-        <div className="card">
-          <div className="project-title">Armory Management System</div>
-          <div className="project-description">
-          The hardware which secure weapon tracking using biometrics, ultrasonic sensors, 
-          and database interface for defense armories.
-          </div>
-          <button
-            className="view-images-btn"
-            onClick={() => setShowArmoryimages(!showArmoryimages)}
-          >
-            {showArmoryimages ? 'Hide Images' : 'View Images'}
-          </button>
-          {showArmoryimages && (
-            <div className="project-images">
-              <img src="/images/A1.jpeg" alt="" />
-              <img src="/images/A2.jpeg" alt="" />
-              <img src="/images/A3.jpeg" alt="" />
-              <img src="/images/A4.jpeg" alt="" />
-            </div>
-          )}
-        </div>
+
       </div>
     </section>
   );
