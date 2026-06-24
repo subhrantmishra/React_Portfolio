@@ -127,8 +127,8 @@ const Projects = () => {
         <div className="card">
           <div className="project-title">Portfolio Website</div>
           <div className="project-description">
-            Responsive and hover effect personal website built with HTML, CSS, JS. Includes resume,
-            projects, and contact form.
+            Created a responsive portfolio website using React with project 
+          showcases, resume details, interactive hover effects, and a contact form.
           </div>
           <button
             className="view-images-btn"
