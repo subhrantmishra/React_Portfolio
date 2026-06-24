@@ -358,7 +358,11 @@ section.work .card{
     width:100%;
     max-width:600px;
 }
-section.work .card:hover{ transform: translateY(-5px); }
+section.work .card:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 217, 255, 0.25), 0 4px 12px rgba(0,0,0,0.12);
+    background: linear-gradient(135deg, #ffffff 0%, #e8fafd 100%);
+}
 section.work .card h2{ font-size:1.3rem; font-weight:500; margin-bottom:1rem; text-align:center; color:var(--secondary); letter-spacing:1.02px; }
 section.work .card p{ font-size:0.9rem; text-align:center; font-weight:600; color:var(--secondary); margin-bottom:1rem; }
 section.work .card ul.des{ list-style-type:square; padding-left:1.2rem; }
@@ -368,8 +372,35 @@ section.work .card ul.des li{ font-family:'Lato',sans-serif; text-align:justify;
 section.projects{ background:var(--light); }
 section.projects .section-heading{ text-align:center; line-height:0.5; margin-bottom:1rem; color:var(--secondary); }
 .projects-container{ max-width:1000px; margin:50px auto; padding:20px; }
-.card{ background:#fff; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); padding:20px; margin-bottom:30px; }
-.project-title{ font-size:22px; font-weight:bold; margin-bottom:10px; color:#333; }
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+.card{
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    padding:20px;
+    margin-bottom:0;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+.card:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 217, 255, 0.25), 0 4px 12px rgba(0,0,0,0.12);
+    background: linear-gradient(135deg, #ffffff 0%, #e8fafd 100%);
+}
+.card:hover .project-title{
+    color: #007bff;
+}
+.project-title{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+    color:#333;
+    transition: color 0.3s ease;
+}
 .project-description{ font-size:16px; color:#555; text-align: justify;}
 .view-images-btn{ margin-top:15px; padding:8px 16px; background-color:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; font-size:14px; }
 .view-images-btn:hover{ background-color:#0056b3; }
@@ -589,6 +620,10 @@ footer .copyright{ color:var(--ternary); }
     .project-images img{
         width: 100% !important;
         height: auto !important;
+    }
+    /* Projects grid — single column on mobile */
+    .projects-grid{
+        grid-template-columns: 1fr;
     }
 }
 
