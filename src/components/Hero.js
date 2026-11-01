@@ -6,7 +6,7 @@ function Hero() {
       <div className="hero flex items-center justify-between">
         
         <div className="left flex-1 flex justify-center">
-          <img src="/images/subhrant_circle.png" alt="" />
+          <img src="/images/My Image.png" alt="Subhrant Mishra" />
         </div>
 
         <div className="right flex-1">
