@@ -13,10 +13,13 @@ import SplashCursor from "./components/SplashCursor";
 import GreetingSlider from "./components/GreetingSlider";
 import CustomCursor from "./components/CustomCursor";
 
+const SHOW_GREETING = true; // 👈 false karo = welcome UI band, true karo = welcome UI on
+
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(SHOW_GREETING);
 
   useEffect(() => {
+    if (!SHOW_GREETING) return;
     const timer = setTimeout(() => {
       setLoading(false);
     }, 5000);
