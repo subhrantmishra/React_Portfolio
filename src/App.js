@@ -13,7 +13,8 @@ import SplashCursor from "./components/SplashCursor";
 import GreetingSlider from "./components/GreetingSlider";
 import CustomCursor from "./components/CustomCursor";
 
-const SHOW_GREETING = true; // 👈 false karo = welcome UI band, true karo = welcome UI on
+const SHOW_GREETING = false; // 👈 false karo = welcome UI band, true karo = welcome UI on
+const SHOW_SPLASH_CURSOR = false; // 👈 false karo = splash cursor band, true karo = splash cursor on
 
 function App() {
   const [loading, setLoading] = useState(SHOW_GREETING);
@@ -34,7 +35,7 @@ function App() {
         <GreetingSlider />
       ) : (
         <div style={{ position: "relative" }}>
-          <SplashCursor />
+          {SHOW_SPLASH_CURSOR && <SplashCursor />}
           <Navbar />
           <About />
           <Services />
